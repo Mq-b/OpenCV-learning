@@ -18,10 +18,13 @@
     <ClCompile Include="src\01加载显示图片与修改保存.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="02矩阵的掩膜操作.cpp">
+    <ClCompile Include="src\test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="src\test.cpp">
+    <ClCompile Include="src\02矩阵的掩膜操作.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\03Mat对象.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
