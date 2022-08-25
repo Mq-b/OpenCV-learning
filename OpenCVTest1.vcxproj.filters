@@ -21,6 +21,9 @@
     <ClCompile Include="02矩阵的掩膜操作.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\test.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="新素材\1 (1).jpg">

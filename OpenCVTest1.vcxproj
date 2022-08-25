@@ -23,6 +23,7 @@
     <ClCompile Include="src\01加载显示图片与修改保存.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="src\test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="新素材\1 (1).jpg" />
