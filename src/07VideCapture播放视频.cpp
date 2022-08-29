@@ -6,7 +6,7 @@
 int main() {
     cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_ERROR);
     //打开视频文件
-    cv::VideoCapture capture("./video/蕾姆海边.mp4");
+    cv::VideoCapture capture("./video/313545355-1-80.mp4");
 
     //isOpen判断视频是否打开成功
     if (!capture.isOpened()) {
