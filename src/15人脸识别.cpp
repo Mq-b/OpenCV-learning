@@ -38,15 +38,16 @@ int main()
 	cascade.detectMultiScale(grayImage, rect, 1.1, 3, 0);  // 分类器对象调用
 
 	printf("检测到人脸个数：%zd\n", rect.size()); // 将识别的人脸的数量显示在控制台中
-	// 【4】标记--在脸部画圆
+	// 【4】标记--在脸部画圆(或方框)
 	for (int i = 0; i < rect.size(); i++)
 	{
 		Point  center;
 		int radius;
 		center.x = cvRound((rect[i].x + rect[i].width * 0.5));
 		center.y = cvRound((rect[i].y + rect[i].height * 0.5));
-		radius = cvRound((rect[i].width + rect[i].height) * 0.25);
-		circle(dstImage, center, radius, colors[i % 7], 2);
+		radius = cvRound((rect[i].width + rect[i].height) * 0.5);
+		//circle(dstImage, center, radius, colors[i % 7], 2);//圆圈
+		rectangle(dstImage, cv::Rect(center.x- rect[i].width*0.5, center.y-rect[i].height*0.5, rect[i].width, rect[i].height), cv::Scalar(30, 144, 255), 2);//(方框)
 
 		// 【5】显示
 		imshow("【人脸识别detectMultiScale】", dstImage);
