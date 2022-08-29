@@ -51,6 +51,9 @@
     <ClCompile Include="src\11腐蚀与膨胀.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\12拍照保存.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Image Include="新素材\1 (1).jpg">

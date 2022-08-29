@@ -49,7 +49,12 @@
     <ClCompile Include="src\10模糊图像.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="src\11腐蚀与膨胀.cpp" />
+    <ClCompile Include="src\11腐蚀与膨胀.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\12拍照保存.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="src\test.cpp" />
   </ItemGroup>
   <ItemGroup>
