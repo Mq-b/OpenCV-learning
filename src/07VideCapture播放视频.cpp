@@ -6,7 +6,7 @@
 int main() {
     cv::utils::logging::setLogLevel(cv::utils::logging::LOG_LEVEL_ERROR);
     //打开视频文件
-    cv::VideoCapture capture("./video/313545355-1-80.mp4");
+    cv::VideoCapture capture("./video/蕾姆海边.mp4");
 
     //isOpen判断视频是否打开成功
     if (!capture.isOpened()) {
@@ -28,7 +28,7 @@ int main() {
             break;
         //显示读取到的视频帧同时设置一帧显示多少毫秒
         cv::imshow("Movie Player", frame);
-        cv::waitKey(16.6);
+        cv::waitKey(33.3);
     }
     capture.release();
     //对于视频需要手动关闭

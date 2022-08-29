@@ -62,7 +62,10 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\15人脸识别.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="src\16屏幕录制人脸捕捉.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="src\test.cpp" />
   </ItemGroup>
@@ -342,6 +345,9 @@
     <Image Include="新素材\mmexport1636530247439.jpg" />
     <Image Include="新素材\mmexport1636530247536.jpg" />
     <Image Include="新素材\mmexport1636530247631.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\library.hpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

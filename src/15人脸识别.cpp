@@ -5,8 +5,8 @@
 #include <cstdio>
 using namespace std;
 using namespace cv;
-int main()
-{
+
+void T() {//最初始的人脸识别
 	// 【1】加载分类器
 	CascadeClassifier cascade;
 	auto i=cascade.load("haarcascade_frontalface_alt.xml");
@@ -53,5 +53,38 @@ int main()
 		imshow("【人脸识别detectMultiScale】", dstImage);
 	}
 	waitKey();
+}
+
+void faceRecognition(cv::Mat& srcImage) {//单独封装一个精简的函数
+	// 加载分类器
+	cv::CascadeClassifier cascade;
+	auto i = cascade.load("haarcascade_frontalface_alt.xml");
+
+	cv::Mat grayImage, dstImage;
+
+	dstImage = srcImage.clone();
+	imshow("【原图】", srcImage);
+
+	cvtColor(srcImage, grayImage, cv::COLOR_BGR2GRAY); // 生成灰度图，提高检测效率
+
+	std::vector<cv::Rect> rect;
+
+	cascade.detectMultiScale(grayImage, rect, 1.1, 3, 0);  // 分类器对象调用
+	for (int i = 0; i < rect.size(); i++)
+	{
+		cv::Point  center;
+		center.x = cvRound((rect[i].x + rect[i].width * 0.5));
+		center.y = cvRound((rect[i].y + rect[i].height * 0.5));
+		rectangle(dstImage, cv::Rect(center.x - rect[i].width * 0.5, center.y - rect[i].height * 0.5, rect[i].width, rect[i].height), cv::Scalar(30, 144, 255), 2);//(方框)
+	}
+	srcImage = dstImage;
+}
+int main()
+{
+	cv::Mat test;
+	test = cv::imread("新素材\\images2.png");
+	faceRecognition(test);
+	cv::imshow("test", test);
+	cv::waitKey();
 }
 //这里遇到一个很诡异的问题，vs2022不管是使用相对路径还是那种绝对路径都无法找到xml文件，只能将它放到项目文件同级目录下，不能放到文件夹中
